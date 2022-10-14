@@ -4,11 +4,15 @@
 <ResourceDictionary
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:CsApp">
+    xmlns:local="using:CsApp"
+    xmlns:nugetComponent="using:WinUIComponentCs">
 
     <ResourceDictionary.MergedDictionaries>
         <XamlControlsResources xmlns="using:Microsoft.UI.Xaml.Controls" />
         <!-- Other merged dictionaries here -->
+
+        <!--uncomment line below to reproduce "Failed to assign to property 'Microsoft.UI.Xaml.ResourceDictionary.Source' because the type 'Windows.Foundation.String' cannot be assigned to the type 'Windows.Foundation.Uri'." exception-->
+        <!--<ResourceDictionary Source="ms-appx:///WinUIComponentCs/Themes/Generic.xaml" />-->
     </ResourceDictionary.MergedDictionaries>
     <!-- Other app resources here -->
 

@@ -1,24 +1,27 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 	<PropertyGroup>
-		<TargetFramework>net6.0-windows10.0.19041.0</TargetFramework>
-		<TargetPlatformMinVersion>10.0.17763.0</TargetPlatformMinVersion>
+		<TargetFramework>net6.0-windows10.0.22621.0</TargetFramework>
+		<TargetPlatformMinVersion>10.0.19041.0</TargetPlatformMinVersion>
 		<RootNamespace>WinUIComponentCs</RootNamespace>
 		<RuntimeIdentifiers>win10-x86;win10-x64;win10-arm64</RuntimeIdentifiers>
 		<UseWinUI>true</UseWinUI>
 		<CsWinRTComponent>true</CsWinRTComponent>
 		<Platforms>x64;x86;arm64</Platforms>
+		<SupportedOSPlatformVersion>10.0.19041.0</SupportedOSPlatformVersion>
+		<WindowsAppContainer>true</WindowsAppContainer>
 	</PropertyGroup>
 
 	<ItemGroup>
-		<PackageReference Include="Microsoft.Windows.CsWinRT" Version="1.6.3" />
-		<PackageReference Include="Microsoft.WindowsAppSDK" Version="1.1.0-preview2" />
-		<PackageReference Include="Microsoft.Windows.SDK.BuildTools" Version="10.0.22000.197" />
+		<PackageReference Include="Microsoft.Windows.CsWinRT" Version="2.0.0" />
+		<PackageReference Include="Microsoft.WindowsAppSDK" Version="1.1.5" />
+		<PackageReference Include="Microsoft.Windows.SDK.BuildTools" Version="10.0.22621.1" />
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Page Update="NameReporter.xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	  </Page>
+		<Page Update="NameReporter.xaml;Themes\Generic.xaml">
+			<Generator>MSBuild:Compile</Generator>
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Page>
 	</ItemGroup>
 
 </Project>
